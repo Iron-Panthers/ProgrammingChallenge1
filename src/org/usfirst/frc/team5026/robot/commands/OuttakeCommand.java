@@ -7,15 +7,13 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class IntakeCommand extends Command {
-	
+public class OuttakeCommand extends Command {
 	private double power;
-	
-    public IntakeCommand(double power) {
+    public OuttakeCommand(double power) {
+    	requires(Robot.intake);
+    	this.power = Math.abs(power);
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
-    	this.power = Math.abs(power);
-    	requires(Robot.intake);
     }
 
     // Called just before this Command runs the first time
@@ -24,7 +22,7 @@ public class IntakeCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.intake.intake(power);
+    	Robot.intake.outtake(power);
     }
 
     // Make this return true when this Command no longer needs to run execute()

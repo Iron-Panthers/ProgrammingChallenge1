@@ -3,7 +3,6 @@ package org.usfirst.frc.team5026.robot;
 
 import org.usfirst.frc.team5026.robot.commands.ExampleCommand;
 import org.usfirst.frc.team5026.robot.subsystems.Arm;
-import org.usfirst.frc.team5026.robot.subsystems.ExampleSubsystem;
 import org.usfirst.frc.team5026.robot.subsystems.IntakeSubsystem;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
@@ -22,12 +21,10 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class Robot extends IterativeRobot {
 
-	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
 	public static Hardware hardware;
 	public static IntakeSubsystem intake;
 	public static Arm arm;
-	public static IntakeSubsystem intake;
 
 	Command autonomousCommand;
 	SendableChooser<Command> chooser = new SendableChooser<>();
@@ -42,7 +39,6 @@ public class Robot extends IterativeRobot {
 		arm = new Arm();
 		intake = new IntakeSubsystem(hardware.motor1);
 		oi = new OI();
-		intake = new IntakeSubsystem(hardware.motor1);
 		chooser.addDefault("Default Auto", new ExampleCommand());
 		// chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", chooser);
