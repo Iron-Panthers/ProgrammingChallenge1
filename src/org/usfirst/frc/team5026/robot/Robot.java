@@ -2,6 +2,7 @@
 package org.usfirst.frc.team5026.robot;
 
 import org.usfirst.frc.team5026.robot.commands.ExampleCommand;
+import org.usfirst.frc.team5026.robot.subsystems.Arm;
 import org.usfirst.frc.team5026.robot.subsystems.ExampleSubsystem;
 import org.usfirst.frc.team5026.robot.subsystems.IntakeSubsystem;
 
@@ -24,7 +25,11 @@ public class Robot extends IterativeRobot {
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
 	public static Hardware hardware;
+<<<<<<< HEAD
 	public static IntakeSubsystem intake;
+=======
+	public static Arm arm;
+>>>>>>> satanBranch
 
 	Command autonomousCommand;
 	SendableChooser<Command> chooser = new SendableChooser<>();
@@ -36,6 +41,7 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void robotInit() {
 		hardware = new Hardware();
+		arm = new Arm();
 		oi = new OI();
 		intake = new IntakeSubsystem(hardware.motor1);
 		chooser.addDefault("Default Auto", new ExampleCommand());
