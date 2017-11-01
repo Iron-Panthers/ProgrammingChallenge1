@@ -27,6 +27,7 @@ public class Robot extends IterativeRobot {
 	public static Hardware hardware;
 	public static IntakeSubsystem intake;
 	public static Arm arm;
+	public static IntakeSubsystem intake;
 
 	Command autonomousCommand;
 	SendableChooser<Command> chooser = new SendableChooser<>();
@@ -39,6 +40,7 @@ public class Robot extends IterativeRobot {
 	public void robotInit() {
 		hardware = new Hardware();
 		arm = new Arm();
+		intake = new IntakeSubsystem(hardware.motor1);
 		oi = new OI();
 		intake = new IntakeSubsystem(hardware.motor1);
 		chooser.addDefault("Default Auto", new ExampleCommand());
