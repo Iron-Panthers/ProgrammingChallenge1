@@ -15,14 +15,20 @@ public class OI {
 	public Joystick stick;
 	public Button Btn1;
 	public Button Btn2;
+	public Button Btn3;
+	public Button Btn4;
 	public void Joystick() {
 		stick = new Joystick(1);
 		Btn1 = new JoystickButton(stick,1);
 		Btn2 = new JoystickButton(stick,2);
+		Btn3 = new JoystickButton(stick,3);
+		Btn4 = new JoystickButton(stick,4);
 	}
 	public void mapButtons() {
-		Btn1.whileHeld(new LiftCommand());
-		Btn2.whileHeld(new LowerCommand());
+		Btn1.whenPressed(new LiftCommand());
+		Btn2.whenPressed(new LowerCommand());
+		Btn3.whileHeld(new IntakeCommand());
+		Btn4.whileHeld(new OuttakeCommand());
 	}
 	//// CREATING BUTTONS
 	// One type of button is a joystick button which is any button on a
