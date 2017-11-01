@@ -25,11 +25,8 @@ public class Robot extends IterativeRobot {
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
 	public static Hardware hardware;
-<<<<<<< HEAD
 	public static IntakeSubsystem intake;
-=======
 	public static Arm arm;
->>>>>>> satanBranch
 
 	Command autonomousCommand;
 	SendableChooser<Command> chooser = new SendableChooser<>();
