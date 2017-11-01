@@ -1,5 +1,7 @@
 package org.usfirst.frc.team5026.robot;
 
+import org.usfirst.frc.team5026.robot.commands.LiftCommand;
+
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
@@ -18,7 +20,7 @@ public class OI {
 		Btn2 = new JoystickButton(stick,2);
 	}
 	public void mapButtons() {
-		Btn1.whileHeld(new);
+		Btn1.whileHeld(new LiftCommand());
 		Btn2.whileHeld(new);
 	}
 	//// CREATING BUTTONS
