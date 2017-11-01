@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="cscore"/>
+	<classpathentry kind="var" path="networktables"/>
+	<classpathentry kind="var" path="opencv"/>
+	<classpathentry kind="var" path="wpilib"/>
+	<classpathentry kind="var" path="USERLIBS_DIR"/>
+	<classpathentry kind="var" path="USERLIBS_DIR/User_Libraries.properties"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
