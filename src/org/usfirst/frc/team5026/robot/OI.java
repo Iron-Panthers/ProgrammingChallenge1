@@ -1,10 +1,7 @@
 package org.usfirst.frc.team5026.robot;
 
 import org.usfirst.frc.team5026.robot.commands.LiftCommand;
-<<<<<<< HEAD
-=======
 import org.usfirst.frc.team5026.robot.commands.LowerCommand;
->>>>>>> satanBranch
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
@@ -25,11 +22,7 @@ public class OI {
 	}
 	public void mapButtons() {
 		Btn1.whileHeld(new LiftCommand());
-<<<<<<< HEAD
-		Btn2.whileHeld(new);
-=======
 		Btn2.whileHeld(new LowerCommand());
->>>>>>> satanBranch
 	}
 	//// CREATING BUTTONS
 	// One type of button is a joystick button which is any button on a
