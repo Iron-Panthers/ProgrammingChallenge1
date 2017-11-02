@@ -19,7 +19,7 @@ public class OI {
 	public Button stickBtn2;
 	public Button stickBtn3;
 	public Button stickBtn4;
-	public void Joystick() {
+	public OI() {
 		stick = new Joystick(1);
 		stickBtn1 = new JoystickButton(stick,1);
 		stickBtn2 = new JoystickButton(stick,2);
