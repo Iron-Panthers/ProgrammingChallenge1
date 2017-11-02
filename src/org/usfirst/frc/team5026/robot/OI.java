@@ -15,22 +15,22 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
  */
 public class OI {
 	public Joystick stick;
-	public Button Btn1;
-	public Button Btn2;
-	public Button Btn3;
-	public Button Btn4;
+	public Button stickBtn1;
+	public Button stickBtn2;
+	public Button stickBtn3;
+	public Button stickBtn4;
 	public void Joystick() {
 		stick = new Joystick(1);
-		Btn1 = new JoystickButton(stick,1);
-		Btn2 = new JoystickButton(stick,2);
-		Btn3 = new JoystickButton(stick,3);
-		Btn4 = new JoystickButton(stick,4);
+		stickBtn1 = new JoystickButton(stick,1);
+		stickBtn2 = new JoystickButton(stick,2);
+		stickBtn3 = new JoystickButton(stick,3);
+		stickBtn4 = new JoystickButton(stick,4);
 	}
 	public void mapButtons() {
-		Btn1.whenPressed(new LiftCommand());
-		Btn2.whenPressed(new LowerCommand());
-		Btn3.whileHeld(new IntakeCommand(Constants.INTAKE_POWER));
-		Btn4.whileHeld(new OuttakeCommand(Constants.OUTTAKE_POWER));
+		stickBtn1.whenPressed(new LiftCommand());
+		stickBtn2.whenPressed(new LowerCommand());
+		stickBtn3.whileHeld(new IntakeCommand(Constants.INTAKE_POWER));
+		stickBtn4.whileHeld(new OuttakeCommand(Constants.OUTTAKE_POWER));
 		
 	}
 	//// CREATING BUTTONS

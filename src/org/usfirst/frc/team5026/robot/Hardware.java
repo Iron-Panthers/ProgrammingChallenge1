@@ -8,6 +8,6 @@ public class Hardware {
 	public Spark motor1;
 	public Hardware() {
 		sol = new DoubleSolenoid(RobotMap.SOLENOID_FORWARD, RobotMap.SOLENOID_REVERSE);
-		motor1 = new Spark(0);
+		motor1 = new Spark(RobotMap.INTAKE_MOTOR);
 	}
 }
